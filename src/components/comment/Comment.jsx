@@ -34,6 +34,7 @@ const Comment = ({blog,account}) => {
     console.log(account);
     
     axios.post("https://blog-backend-81ee.onrender.com/comment", comData)
+    // https://blog-backend-81ee.onrender.com
         .then((res) => {alert("comment inserted")
     navigate(`/blog/${blog._id}`)
 
