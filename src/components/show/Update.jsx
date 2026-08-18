@@ -19,7 +19,7 @@ const Updatedata = ({data}) => {
         e.preventDefault()
         console.log(frmdata);
         
-        axios.put(`http://localhost:5000/user/${frmdata._id}`,frmdata)
+        axios.put(`https://blog-backend-81ee.onrender.com/user/${frmdata._id}`,frmdata)
   .then(res=>alert('data updated successfully'))
   .catch(e=>console.log(e))
   navigate('/show')

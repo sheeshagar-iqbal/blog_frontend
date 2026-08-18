@@ -70,7 +70,7 @@ const CreateBlog = () => {
       username: user?.username,
     };
 
-    axios.post("http://localhost:5000/blog", blogData)
+    axios.post("https://blog-backend-81ee.onrender.com/blog", blogData)
         .then((res) => alert("blog inserted"))
         .catch((err) => console.log(err));
 

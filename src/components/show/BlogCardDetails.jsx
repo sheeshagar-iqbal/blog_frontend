@@ -18,7 +18,7 @@ const BlogCardDetails = () => {
 
   const deleteblog =()=>{
      axios
-      .delete(`http://localhost:5000/blog/${id}`)
+      .delete(`https://blog-backend-81ee.onrender.com/blog/${id}`)
       .then((res) => {
         alert(`delete ${blog.title} blog `)
         navigate('/')
@@ -29,7 +29,7 @@ const BlogCardDetails = () => {
   }
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/blog/${id}`)
+      .get(`https://blog-backend-81ee.onrender.com/blog/${id}`)
       .then((res) => {
         // console.log(res.data);
         // console.log(account);

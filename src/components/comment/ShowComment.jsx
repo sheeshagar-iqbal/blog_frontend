@@ -14,7 +14,7 @@ const ShowComment = ({ blog, account }) => {
   // console.log(id);
   
             axios
-      .delete(`http://localhost:5000/comment/${id}`)
+      .delete(`https://blog-backend-81ee.onrender.com/comment/${id}`)
       .then((res) => {alert('comment deleted')
     navigate(`/blog/${blog._id}`)
 
@@ -25,7 +25,7 @@ const ShowComment = ({ blog, account }) => {
  }
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/comment?comment=${blog._id}`)
+      .get(`https://blog-backend-81ee.onrender.com/comment?comment=${blog._id}`)
       .then((res) => setComment(res.data))
       .catch((err) => console.log(err));
   }, [blog._id,deletecomment]);

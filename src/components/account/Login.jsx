@@ -77,7 +77,7 @@ const Login = () => {
     } else {
       // console.log(signupdata);
       axios
-        .post("http://localhost:5000/user", signupdata)
+        .post("https://blog-backend-81ee.onrender.com/user", signupdata)
         .then((res) => alert("data inserted"))
         .catch((err) => console.log(err));
 

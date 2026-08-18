@@ -72,7 +72,7 @@ const UpdateBlog = () => {
       username: user?.username,
     };
 
-    axios.put(`http://localhost:5000/blog/${id}`, blogData)
+    axios.put(`https://blog-backend-81ee.onrender.com/blog/${id}`, blogData)
         .then((res) => alert("blog updated"))
         .catch((err) => console.log(err));
 
@@ -81,7 +81,7 @@ const UpdateBlog = () => {
   };
   useEffect(()=>{
     console.log(id);
-      axios.get(`http://localhost:5000/blog/${id}`)
+      axios.get(`https://blog-backend-81ee.onrender.com/blog/${id}`)
         .then((res) => {setFormData(res.data)
             console.log(res.data);
             

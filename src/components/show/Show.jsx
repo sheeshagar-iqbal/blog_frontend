@@ -14,7 +14,7 @@ const Show = () => {
 
 
     function del(id){
-    axios.delete(`http://localhost:5000/user/${id}`)
+    axios.delete(`https://blog-backend-81ee.onrender.com/user/${id}`)
     .then(res=>{alert('deleter')
       getstudent()
     })
@@ -23,7 +23,7 @@ const Show = () => {
   }
 
   function update(id){
-    axios.get(`http://localhost:5000/user/${id}`)
+    axios.get(`https://blog-backend-81ee.onrender.com/user/${id}`)
     .then(res=>setUserdata(res.data))
     // .then(res=>console.log(res.data)       )
     .catch(err=>console.log('something wrong',err)
@@ -32,7 +32,7 @@ const Show = () => {
 
   function sortdata(s){
     // console.log(s);
-  axios.get(`http://localhost:5000/user/sort?name=${s}`)
+  axios.get(`https://blog-backend-81ee.onrender.com/user/sort?name=${s}`)
   .then(res=>{
     setapidata(res.data)
     console.log(res.data);
@@ -45,7 +45,7 @@ const Show = () => {
 
 
   function getstudent(){
-          axios.get("http://localhost:5000/user")
+          axios.get("https://blog-backend-81ee.onrender.com/user")
   .then(res=>{setapidata(res.data)
     console.log(res.data)
   })

@@ -8,7 +8,7 @@ const BlogAll = ({category}) => {
   const [blogs,setBlogs]=useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/blog")
+    axios.get("https://blog-backend-81ee.onrender.com/blog")
         .then((res) => setBlogs(res.data))
         .catch((err) => console.log(err));
   },[])
