@@ -20,15 +20,19 @@ const ShowComment = ({ blog, account }) => {
 
       })
       .catch((err) => console.log(err));
-
+  getcomment()
 
  }
-  useEffect(() => {
-    axios
+
+ function getcomment(){
+  axios
       .get(`https://blog-backend-81ee.onrender.com/comment?comment=${blog._id}`)
       .then((res) => setComment(res.data))
       .catch((err) => console.log(err));
-  }, [blog._id,deletecomment]);
+ }
+  useEffect(() => {
+    getcomment()
+  }, [blog._id]);
   return (
     <>
       <Box>
