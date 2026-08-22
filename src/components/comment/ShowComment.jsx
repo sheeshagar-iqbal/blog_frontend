@@ -16,7 +16,7 @@ const ShowComment = ({ blog, account }) => {
             axios
       .delete(`https://blog-backend-81ee.onrender.com/comment/${id}`)
       .then((res) => {alert('comment deleted')
-    navigate(`/blog/${blog._id}`)
+    // navigate(`/blog/${blog._id}`)
   getcomment()
 
       })

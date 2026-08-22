@@ -27,8 +27,9 @@ const BlogCardDetails = () => {
         console.log(err);
       });
   }
-  useEffect(() => {
-    axios
+
+  function getblog(){
+     axios
       .get(`https://blog-backend-81ee.onrender.com/blog/${id}`)
       .then((res) => {
         // console.log(res.data);
@@ -39,6 +40,9 @@ const BlogCardDetails = () => {
       .catch((err) => {
         console.log(err);
       });
+  }
+  useEffect(() => {
+     getblog()
 
 
 
