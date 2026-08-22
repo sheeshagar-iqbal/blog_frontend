@@ -26,7 +26,7 @@ const ShowComment = ({ blog, account }) => {
   };
 
   const submitHandler = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     const comData = {
       ...commentData,
