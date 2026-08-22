@@ -137,11 +137,11 @@ const BlogCardDetails = () => {
       sx={{
         margin:'20px 0'
       }}>
-        {
+        {/* {
           (account.id)?
           <Comment blog={blog} account={account} />
           : null
-        }
+        } */}
       
     <ShowComment blog={blog} account={account}/>
     </Box>
